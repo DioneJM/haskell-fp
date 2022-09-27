@@ -18,3 +18,9 @@ This is a
 multi
 line comment
 -}
+
+integralDivision :: Int -> Int -> Int
+integralDivision a b = div a b
+
+fractionalDivision :: Float -> Float -> Float
+fractionalDivision a b = a / b
