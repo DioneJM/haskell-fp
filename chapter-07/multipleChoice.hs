@@ -16,3 +16,13 @@ tensDigitRewrite :: Integral a => a -> a
 tensDigitRewrite x = (snd . divModTen . fst . divModTen) x
     where divModTen x = divMod x 10
 --hundredsDigit x = (snd . divModHundred . fst . divModHundred . fst . divModHundred) x
+
+foldBool :: a -> a -> Bool -> a
+foldBool a1 a2 cond = case cond of
+    True -> a1
+    False -> a2
+
+foldBool2 :: a -> a -> Bool -> a
+foldBool2 a1 a2 cond
+    | cond == True = a1
+    | otherwise = a2
