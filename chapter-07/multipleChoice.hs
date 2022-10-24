@@ -26,3 +26,6 @@ foldBool2 :: a -> a -> Bool -> a
 foldBool2 a1 a2 cond
     | cond == True = a1
     | otherwise = a2
+
+g :: (a -> b) -> (a, c) -> (b, c)
+g aToB (a, c) = (aToB a, c)
